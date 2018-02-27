@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CurrencyViewController" customModule="StepExample" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a currency" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B42-5M-65w">
+                    <rect key="frame" x="16" y="36" width="343" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qeE-jD-b46">
+                    <rect key="frame" x="149" y="89" width="76" height="30"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T7O-Si-yWY">
+                            <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                            <state key="normal" title="€"/>
+                            <connections>
+                                <action selector="euroButtonPressed:" destination="-1" eventType="touchUpInside" id="tL4-fv-9u0"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0e0-E2-7zk">
+                            <rect key="frame" x="46" y="0.0" width="30" height="30"/>
+                            <state key="normal" title="$"/>
+                            <connections>
+                                <action selector="dollarButtonPressed:" destination="-1" eventType="touchUpInside" id="Dnp-69-9Lc"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="0e0-E2-7zk" secondAttribute="bottom" id="2HT-eR-szA"/>
+                        <constraint firstAttribute="trailing" secondItem="0e0-E2-7zk" secondAttribute="trailing" id="6SA-MJ-XZH"/>
+                        <constraint firstItem="T7O-Si-yWY" firstAttribute="leading" secondItem="qeE-jD-b46" secondAttribute="leading" id="IUc-26-lDg"/>
+                        <constraint firstItem="0e0-E2-7zk" firstAttribute="leading" secondItem="T7O-Si-yWY" secondAttribute="trailing" constant="16" id="KLw-Pp-1R1"/>
+                        <constraint firstItem="0e0-E2-7zk" firstAttribute="top" secondItem="qeE-jD-b46" secondAttribute="top" id="SF9-sm-4Wl"/>
+                        <constraint firstItem="T7O-Si-yWY" firstAttribute="top" secondItem="qeE-jD-b46" secondAttribute="top" id="X1g-jN-Jh8"/>
+                        <constraint firstAttribute="bottom" secondItem="T7O-Si-yWY" secondAttribute="bottom" id="pzH-lG-Ckx"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="qeE-jD-b46" firstAttribute="top" secondItem="B42-5M-65w" secondAttribute="bottom" constant="32" id="Tmm-Rb-fjL"/>
+                <constraint firstItem="B42-5M-65w" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="dzq-A0-ykj"/>
+                <constraint firstItem="B42-5M-65w" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="jnt-Qa-jer"/>
+                <constraint firstItem="qeE-jD-b46" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="qk7-sS-Hhb"/>
+                <constraint firstItem="B42-5M-65w" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="uwx-QA-YzP"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+</document>

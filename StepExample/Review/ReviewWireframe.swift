@@ -19,7 +19,7 @@ func reviewStep(_ navigation: UINavigationController) -> StepT<ReviewInput, Void
 class ReviewWireframe: Step {
     
     let navigation: UINavigationController
-    var completion: (() -> Void)?
+    var completion: ((()) -> Void)?
     init(navigation: UINavigationController) {
         self.navigation = navigation
     }
@@ -37,7 +37,7 @@ class ReviewWireframe: Step {
 extension ReviewWireframe: ReviewViewDelegate {
     
     func didIndicateDoneAction() {
-        self.completion?()
+        self.completion?(())
     }
     
 }
